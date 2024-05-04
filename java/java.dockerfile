@@ -1,6 +1,6 @@
 ARG java_version=17
 
-FROM edc-alpine as base
+FROM codenshareregistry/edc-alpine as base
 
 
 FROM base AS branch-openjdk-8
