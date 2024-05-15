@@ -12,7 +12,7 @@ jobs:
 
   build_image_and_deploy_it_on_registry:
     env:
-      DOCKERFILE: java/java.dockerfile
+      DOCKERFILE: java.dockerfile
       REPOSITORY: ${{ secrets.DOCKER_HUB_REGISTRY }}/edc-java
 
     runs-on: ubuntu-latest
