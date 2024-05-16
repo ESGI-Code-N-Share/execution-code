@@ -3,10 +3,6 @@ ARG java_version=17
 FROM codenshareregistry/edc-alpine as base
 
 
-FROM base AS branch-openjdk-8
-RUN echo "this is stage that sets Java 8"
-ENV JAVA_VERSION=8
-
 FROM base AS branch-openjdk-11
 RUN echo "this is stage that sets Java 11"
 ENV JAVA_VERSION=11
@@ -14,6 +10,10 @@ ENV JAVA_VERSION=11
 FROM base AS branch-openjdk-17
 RUN echo "this is stage that sets Java 17"
 ENV JAVA_VERSION=17
+
+FROM base AS branch-openjdk-21
+RUN echo "this is stage that sets Java 21"
+ENV JAVA_VERSION=21
 
 
 FROM branch-openjdk-${java_version}
