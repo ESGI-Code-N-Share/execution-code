@@ -26,8 +26,7 @@ LABEL version="1.0.0"\
       java.version=${JAVA_VERSION}
 
 
-RUN adduser -D java
-WORKDIR /home/java/app
-USER java
+WORKDIR /home/executor/app
+USER executor
 
 ENTRYPOINT ["java", "App.java"]
