@@ -1,4 +1,4 @@
-name: Docker Java Image CI
+name: Docker Javascript Image CI
 
 on:
   workflow_dispatch:
