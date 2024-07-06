@@ -15,6 +15,10 @@ FROM base AS branch-openjdk-21
 RUN echo "this is stage that sets Java 21"
 ENV JAVA_VERSION=21
 
+FROM base AS branch-openjdk-latest
+RUN echo "this is stage that sets Java 21"
+ENV JAVA_VERSION=21
+
 
 FROM branch-openjdk-${java_version}
 USER root
