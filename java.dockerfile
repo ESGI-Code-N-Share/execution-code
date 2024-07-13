@@ -27,7 +27,8 @@ RUN apk update --no-cache && apk add openjdk${JAVA_VERSION}
 
 LABEL version="1.0.0"\
       description="Docker image to set environnement openJDK with the version ${JAVA_VERSION}" \
-      java.version=${JAVA_VERSION}
+      java.version=${JAVA_VERSION} \
+      extension="java"
 
 
 WORKDIR /home/executor/app
