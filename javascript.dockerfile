@@ -5,7 +5,9 @@ RUN echo "Installation Node ..."
 RUN apk update --no-cache && apk add nodejs npm
 
 LABEL version="1.0.0"\
-      description="Docker image to set environnement node with the current version"
+      description="Docker image to set environnement node with the current version" \
+      javascript.version="latest" \
+      extension="js"
 
 WORKDIR /home/executor/app
 USER executor
