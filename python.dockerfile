@@ -3,7 +3,7 @@ ARG python_version=3
 FROM codenshareregistry/edc-alpine as base
 
 FROM base AS branch-python-3
-RUN echo "this is stage that sets Java 11"
+RUN echo "this is stage that sets Python 3"
 ENV PYTHON_VERSION=3
 
 
